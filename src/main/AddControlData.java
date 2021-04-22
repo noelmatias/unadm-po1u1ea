@@ -2,6 +2,7 @@ package main;
 
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.kernel.pdf.PdfReader;
 
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Cell;
@@ -9,12 +10,12 @@ import com.itextpdf.layout.element.Table;
 
 public class AddControlData {
     public static void main(String args[]) throws Exception {
-        // Creating a PdfDocument object
-        String dest = "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/sample.pdf";
-        PdfWriter writer = new PdfWriter(dest);
+        // Set original and destination file paths
+        String source = "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/original.pdf";
+        String destination = "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/sample.pdf";
 
-        // Creating a PdfDocument object
-        PdfDocument pdf = new PdfDocument(writer);
+        // Creating a PdfDocument object from source
+        PdfDocument pdf = new PdfDocument(new PdfReader(source), new PdfWriter(destination));
 
         // Creating a Document object
         Document doc = new Document(pdf);
@@ -56,6 +57,6 @@ public class AddControlData {
 
         // Closing the document
         doc.close();
-        System.out.println("Table created successfully..");
+        System.out.println("New controlled document created..");
     }
 }
