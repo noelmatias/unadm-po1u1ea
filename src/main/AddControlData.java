@@ -19,12 +19,17 @@ import java.util.Scanner;
 
 public class AddControlData {
     public static void main(String args[]) throws Exception {
+        /*/ Example paths copy to use them
+            src/test/original.pdf
+            src/test/properties.json
+            src/test/sample.pdf
+        /*/
+
         // Set system input
         Scanner path = new Scanner(System.in);
 
         // Get original file path
         System.out.println("Original document path:");
-        // Source path "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/original.pdf";
         String source = path.next();
         path.nextLine();
 
@@ -32,13 +37,11 @@ public class AddControlData {
         JSONParser jsonParser = new JSONParser();
         System.out.println("JSON path:");
         String json = path.next();
-        // Input line "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/properties.json"
         path.nextLine();
         JSONObject data = (JSONObject) jsonParser.parse(new FileReader(json));
 
         // Get destination file path
-        System.out.println("Original document path:");
-        // Destination path "D:/OneDrive/Academy/UnADM/IDS/2101-B2/PO1/U1/EA/sample.pdf"
+        System.out.println("Controlled document path:");
         String destination = path.next();
         path.nextLine();
 
@@ -49,8 +52,8 @@ public class AddControlData {
         Document doc = new Document(pdf);
 
         // Creating a table
-        float [] pointColumnWidths = {104F, 104F, 104F, 104F, 104F};
-        Table table = new Table(pointColumnWidths);
+        float [] columnsWith = {104F, 104F, 104F, 104F, 104F};
+        Table table = new Table(columnsWith);
 
         // Adding first row titles
         table.addCell(new Cell().add("Código").setBold());
@@ -65,10 +68,9 @@ public class AddControlData {
         table.addCell(new Cell().add((String) data.get("cdate")));
 
         // Calculate revision
-        Long rev = (Long) data.get("rev");
-        table.addCell(new Cell().add(String.valueOf(rev + 1)));
+        table.addCell(new Cell().add(String.valueOf((Long) data.get("rev") + 1)));
 
-        // Set revision date for today
+        // Set revision date as today
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate today = LocalDate.now();
         table.addCell(new Cell().add(dtf.format(today)));
@@ -87,8 +89,9 @@ public class AddControlData {
         table.addCell(new Cell().add((String) data.get("type")));
 
         // Calculate next revision date
-        LocalDate nextYear = LocalDate.now().plusYears(5);
-        table.addCell(new Cell().add(dtf.format(nextYear)));
+        Long revPeriodicity = (Long) data.get("revp");
+        LocalDate nextRev = LocalDate.now().plusYears(revPeriodicity);
+        table.addCell(new Cell().add(dtf.format(nextRev)));
 
         // Adding Table to document
         doc.add(table);

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e229ecbe-1b66-4cac-bf7b-d6b91477ea30" name="Default Changelist" comment="Added source file to edit.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_kernel_7_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_itextpdf_kernel_7_0_22.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/po1u1ea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/po1u1ea.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="e229ecbe-1b66-4cac-bf7b-d6b91477ea30" name="Default Changelist" comment="References changed in comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AddControlData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AddControlData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/properties.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/sample.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/sample.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/AddControlData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/AddControlData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,35 @@
       <option name="project" value="LOCAL" />
       <updated>1619130754620</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ask for files path.">
+      <created>1619138329431</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619138329431</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added the test files">
+      <created>1619138962004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619138962004</updated>
+    </task>
+    <task id="LOCAL-00005" summary="PDF test files added">
+      <created>1619138993524</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619138993524</updated>
+    </task>
+    <task id="LOCAL-00006" summary="References changed in comments">
+      <created>1619139195741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619139195741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +136,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project to maven, added iText dependencies, main class create new pdf with control table." />
     <MESSAGE value="Added source file to edit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added source file to edit." />
+    <MESSAGE value="Ask for files path." />
+    <MESSAGE value="Added the test files" />
+    <MESSAGE value="PDF test files added" />
+    <MESSAGE value="References changed in comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="References changed in comments" />
   </component>
 </project>
